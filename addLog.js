@@ -9,7 +9,6 @@ const fs = require('fs');
 */
 function addLog(platform){
 
-	console.log(platform,platform.length);
 	//When no platform has been mentioned then the total count is updated
 	if(platform.length==0){
 		
