@@ -1,0 +1,84 @@
+<!-- 
+	CSS flex is a tool for learning CSS Flexbox
+	Created by Aashish Loknath Panigrahi (@asxyzp)
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FlexGrid : Learn CSS Flexbox & Grid layout</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/4d77ecffb7.js" crossorigin="anonymous"></script>
+	<style type="text/css" class="style"></style>
+</head>
+<body>
+	<!-- 
+		Header contains two things :
+		1. top-bar-container which contains the logo and the buttons for mobile toggle, dark mode & toggling the menu
+		2. menu-container which contains the the links and the social buttons
+	 -->
+	<header>
+		<div class="top-bar-container">
+			<div class="logo">flexgrid</div>
+			<div class="button-container">
+				<i class="fas fa-eye mobile-view-button"></i>
+				<i class="fas fa-adjust dark-mode-button"></i>
+				<i class="fas fa-caret-down menu-button"></i>
+			</div>
+		</div>
+		<div class="menu-container">
+			<div class="menu-link-container">
+				<a href="about.html">About</a>
+			</div>
+			<div class="menu-icon-container">
+				<i class="fab fa-twitter-square"></i>
+				<i class="fab fa-instagram-square"></i>
+				<i class="fas fa-blog"></i>
+			</div>
+		</div>
+	</header>
+
+	<!-- 
+		main tag contains two things :
+		editor-container which contains the div, which will be used for editing
+		flexbox-container on which the entries from the editor-container will be reflected upon
+
+	 -->
+	<main>
+		<div class="editor-container">
+			<div class="flexbox-style" contenteditable="true">
+				/*Enter some CSS styles here*/<br>
+				/*For Mobile, use the eye button to toggle b/w editor and output*/<br>
+				.container{}<br>
+				.box{}<br>
+				.box1{}<br>
+				.box2{}<br>
+				.box3{}<br>
+				.box4{}<br>
+				.box5{}<br>
+				.box6{}<br>
+			</div>
+		</div>
+		<div class="flexbox-container">
+			<h2>.container</h2>
+			<div class="container">
+				<div class="box box1"><img src="assets/1.png"></div>
+				<div class="box box2"><img src="assets/2.png"></div>
+				<div class="box box3"><img src="assets/3.png"></div>
+				<div class="box box4"><img src="assets/4.png"></div>
+				<div class="box box5"><img src="assets/5.png"></div>
+				<div class="box box6"><img src="assets/6.png"></div>
+			</div>
+		</div>
+	</main>
+
+	<footer>Made w/ <i class="fas fa-heart"></i> from India.</footer>
+	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+	<script type="text/javascript" src="script.js" async defer></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+/*
+	Styling the home page
+	Created by Aashish Loknath Panigrahi
+*/
+
+/*Setting CSS variables which can be used throughout the code*/
+:root{
+	--black : black;
+	--white: white;
+	--black-shadow: 0px 10px 10px -7px black;
+	--black-shadow1: 0px 10px 10px -9px black;
+	--white-shadow: 0px 10px 10px -7px white;
+};
+
+body{													/*Setting default styles across the body*/
+	margin: 0px;
+	background: var(--black);
+}
+h2{														/*Styling h2*/
+	text-align: center;
+	font-family: 'Roboto Slab', serif;
+}
+
+/*Styling the top-bar*/
+.top-bar-container{										/*Styling the top bar which contains the logo, as well as the main buttons*/
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo{													/*Styling the logo*/
+	font-size: 2em;
+	font-family: 'Pacifico', cursive;
+	padding: 10px;
+}
+.button-container{										/*Styling the buttons in the top bar*/
+	background: var(--black);							/*Replace w/ --black and --white in case of reverse mode*/
+	color: var(--white);
+	padding: 3px;
+	border-radius: 5px;
+	margin-right: 5px;
+	box-shadow: var(--black-shadow);
+}
+.button-container>i:hover{                             /*Styling hover state for buttons in the menu*/
+	background: var(--white);
+	color: var(--black);
+	border-radius: 5px;
+}
+.mobile-view-button,.dark-mode-button,.menu-button{		/*Styling the top bar menu buttons*/
+	font-size: 1.3em;
+	font-family: 'Pacifico', cursive;
+	padding: 10px;
+}
+.button-container>.mobile-view-button{					/*Will be hidden by default and will be visible only in mobile view*/	
+	display: none;
+}
+
+
+/*Styling the menu below the top-bar*/
+/*Styling the container which contains the menu icons and the links*/
+.menu-container{									    
+	display: none;
+	padding:  5px;
+	color:  var(--white);
+	background: var(--black);
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 5px;
+	font-family: sans-serif;
+}
+.menu-link-container{									/*Styling link container*/
+	margin-left: 5px;
+}
+.menu-icon-container{									/*Styling the container which contains the icons in the menu*/
+	display: flex;
+	color: var(--black);
+	background: var(--white);
+	padding:  5px;
+	border-radius:  5px;
+}
+.menu-icon-container>i{									/*Styling the menu icons*/
+	font-size: 1.5em;
+	padding: 10px;
+}
+.menu-link-container>a{									/*Styling the container which contains link in the menu*/								
+	color: var(--white);
+	font-weight: 600;
+}
+.menu-icon-container>i:hover{							/*Styling the icons in the menu*/								
+	background: var(--black);
+	color: var(--white);
+	border-radius: 5px;
+}
+
+/*Styling the main container containing flexbox-style and flexbox-container*/
+/*Styling the main tag*/
+main{
+	display: flex;
+	padding: 10px;
+	margin-bottom: 20px;
+	align-items: center;
+}
+main>div{												/*Styling the containers inside the main tag*/
+	width: 50vw;
+	height: 70vh;
+	padding: 10px;
+}
+.flexbox-style{											/*Styling the container which contains text which must be edited for styling*/
+	height: 100%;
+	padding: 10px;
+	background: var(--black);
+	color: var(--white);
+	outline: 0px;
+	border-radius: 5px;
+	overflow-y: auto;
+	box-shadow: var(--black-shadow);
+	font-family: monospace;
+}
+.flexbox-container{										/*Setting the container containing flexbox container*/
+	margin-top:  -50px;
+}
+.container{												/*Setting the default styling for container which will be displayed on the screen*/
+	border-radius: 5px;
+	padding: 10px 20px;
+	background: lightgray;
+	height: 86%;
+	overflow: auto;
+	cursor: pointer;
+}
+
+.box{												     /*Setting styling for default box flexbox item*/
+	padding: 20px;
+	background: var(--white);
+	border-radius: 5px;
+	margin:20px;
+	overflow-y: auto;
+	font-family: sans-serif;
+	display: flex;
+	align-items: center;
+}
+
+.box>img{
+	display: block;
+	margin: auto;
+}
+
+.box:hover{
+	box-shadow: var(--black-shadow1);
+	transform: scale(1.02);	
+}
+
+/*Styling the footer*/
+footer{
+	font-family: sans-serif;
+	text-align: center;
+}
+footer>.fas{
+	color: red;
+}
+
+/*General hide class to toggle stuff*/
+.hide{
+	display: none;
+}
+.flex{
+	display: flex;
+}
+
+/*.dark will be used for dark mode background color*/
+.dark{
+	background: #16202B;
+}
+
+.tippy-content{
+	font-family: sans-serif;
+}
+
+/*Setting media queries*/
+@media(max-width: 920px){
+	main{
+		flex-direction: column;
+	}
+	.flexbox-container{
+		width: 95%;
+		display: none;
+		margin-top: 0px;
+	}
+	.editor-container{
+		width: 95%;
+	}
+	.button-container>.mobile-view-button{								    /*Will be hidden by default and will be visible only in mobile view*/	
+		display: inline;
+	}
+	footer{
+		margin-top: 20px;
+	}
+}

@@ -1,0 +1,43 @@
+/*
+	Styling the about page
+	Created by Aashish Loknath Panigrahi
+*/
+
+/*Styling all elements within the body tag*/
+body{
+	display: flex;
+	height: 96vh;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+}
+
+/*Styling all elements within the main tag*/
+body>main{
+	text-align: center;
+	flex-basis: 30%;
+	background: black;
+	color: white;
+	padding: 20px;
+	box-shadow: 0px 10px 10px -7px black;
+	border-radius: 5px;
+}
+
+/*Styling the logo*/
+.logo{													
+	font-size: 2em;
+	font-family: 'Pacifico', cursive;
+	padding: 10px;
+}
+
+/*Styling the links*/
+a{
+	color: white;
+}
+
+/*Setting media queries*/
+@media(max-width: 920px){
+	body>main{
+		flex-basis: 80%;
+	}
+}
